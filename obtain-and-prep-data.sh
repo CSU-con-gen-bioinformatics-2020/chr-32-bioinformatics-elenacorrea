@@ -17,7 +17,7 @@
 # that I have shared with everyone in the class already
 
 # If I had needed to download this, I would have used a command like this:
-rclone copy --tpslimit 10 --fast-list -P --drive-shared-with-me gdrive-pers:CSU-con-gen-2020/pre-indexed-chinook-genome  pre-indexed-chinook-genome
+rclone copy --tpslimit 10 --fast-list -P --drive-shared-with-me remote:CSU-con-gen-2020/pre-indexed-chinook-genome  pre-indexed-chinook-genome
 
 # You would need to modify that for your own system.
 
@@ -29,16 +29,16 @@ rclone copy --tpslimit 10 --fast-list -P --drive-shared-with-me gdrive-pers:CSU-
 # use the --tps-limit 19 and --fast-list options.
 
 # Here is how I did it:
-rclone copy --tpslimit 10 --fast-list -P --drive-shared-with-me gdrive-pers:CSU-con-gen-2020/fastqs-chr32-160-chinook-8-lanes  fastqs-chr32-160-chinook-8-lanes
+rclone copy --tpslimit 10 --fast-list -P --drive-shared-with-me remote:CSU-con-gen-2020/fastqs-chr32-160-chinook-8-lanes  fastqs-chr32-160-chinook-8-lanes
 
 
 
 
 # 3. Move the folder with the preindexed genome into this repository directory
-# and rename it to "genome" (or make a Symbolic link).
+# and rename it "genome" (or make a Symbolic link).
 
 # Here is what I did (making a symbolic link)
-ln -s /home/eanderson/scratch/chinook-play/chinook-genome-idx genome
+ln -s ~/scratch/chr-32-bioinformatics-elenacorrea/pre-indexed-chinook-genome/ genome
 
 # You will have to modify this to reflect the proper location of the
 # directory on your system.
@@ -48,7 +48,7 @@ ln -s /home/eanderson/scratch/chinook-play/chinook-genome-idx genome
 # all the gzipped FASTQ files into a directory named "fastqs" in this repository directory.
 
 # Here is what I did (making a symbolic link)
-ln -s  /home/eanderson/scratch/course_stuff/fastqs-chr32-160-chinook-8-lanes fastqs
+ln -s ~/scratch/chr-32-bioinformatics-elenacorrea/fastqs-chr32-160-chinook-8-lanes/ fastqs
 
 # You will have to modify this to reflect the proper location of the
 # directory on your system.
