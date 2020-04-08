@@ -13,3 +13,5 @@ fastqs
 genome
 stderr
 vcf
+run-single-error*
+run-single-out*
